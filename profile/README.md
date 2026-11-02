@@ -9,8 +9,9 @@ One rule shapes everything here: a tool that inspects your accounts must not be 
 | Project | What it does | State |
 | --- | --- | --- |
 | [Gauge](https://github.com/posture-sec/guage) | Reads a Stellar account's signers, thresholds, flags and home domain from Horizon, compares them with a policy file you declare, and exits nonzero when the two disagree. Go CLI, binary `stellar-gauge`. | Unaudited, functional alpha. [Documentation site](https://posture-sec.github.io/guage/) live since 2026-11-02. |
+| [Airlock](https://github.com/posture-sec/airlock) | Scans a Stellar or Soroban *repository* for supply-chain compromise and release-integrity gaps: what a workflow can reach, what a manifest declares, what a package's lifecycle scripts do. Python CLI, binary `airlock`, zero runtime dependencies. | Unaudited, functional alpha with no Action yet. `v0.0.1` is a pre-release, not a version to depend on. [Documentation site](https://posture-sec.github.io/airlock/) live since 2026-11-02. |
 
-Gauge is the only code repository published in this org today. Airlock, a Python scanner for Stellar and Soroban repositories, is the sibling project: it shares conventions with Gauge and no code, and it has no public home here yet.
+Gauge looks at accounts on the chain; Airlock looks at the code and CI that publish to it. They share working conventions and no code. Airlock arrived here on 2026-11-02: it was published under a GitHub account that was suspended, and the repository, its history and its documentation were moved to this organization rather than restarted.
 
 ## How the work runs
 
@@ -23,11 +24,12 @@ Gauge is the only code repository published in this org today. Airlock, a Python
 
 Read on 2026-11-02:
 
-- OpenSSF Scorecard for Gauge: **6.8** overall. `Pinned-Dependencies`, `Token-Permissions`, `Dangerous-Workflow`, `Security-Policy`, `Dependency-Update-Tool`, `Vulnerabilities`, `Binary-Artifacts`, `Fuzzing`, `License` and `CI-Tests` score 10; `Branch-Protection` scores 4; `Code-Review`, `Maintained`, `Contributors`, `SAST` and `CII-Best-Practices` score 0. [Full result](https://scorecard.dev/viewer/?uri=github.com/posture-sec/guage).
+- OpenSSF Scorecard for Gauge: **6.8** overall. `Pinned-Dependencies`, `Token-Permissions`, `Dangerous-Workflow`, `Security-Policy`, `Dependency-Update-Tool`, `Vulnerabilities`, `Binary-Artifacts`, `Fuzzing`, `License` and `CI-Tests` score 10; `Branch-Protection` scores 4; `Code-Review`, `Maintained`, `Contributors`, `SAST` and `CII-Best-Practices` score 0. [Full result](https://scorecard.dev/viewer/?uri=github.com/posture-sec/guage). Airlock has no Scorecard run yet, so no number is quoted for it.
 - Gauge has been run against testnet only, which is its own verification policy. Five recorded runs, the latest at ledger 5517199 on 2026-11-02: one WARN finding, exit 1.
-- Readiness in Gauge's roadmap: 38 of 70 tasks across Phases 0 to 6, 1 of 10 gates green. v0.1.0 is Phases 0 to 4 and v0.2.0 is Phases 5 and 6. Neither tag exists yet.
+- Gauge readiness: 39 of 71 tasks across Phases 0 to 6, 1 of 10 gates green. v0.1.0 is Phases 0 to 4 and v0.2.0 is Phases 5 and 6. Neither tag exists yet.
+- Airlock readiness: 45 of 95 tasks across Phases 0 to 8, 0 of 10 gates green. 709 tests pass with one skipped, and `main` scans its own repository with no HIGH and no WARN findings. Twenty-two rules in four rule files; the composite Action, the Stellar-side detectors and SARIF output are not built, which is what its pre-release notes say.
 - One maintainer and no external contributions yet, which is why `Contributors` and `Code-Review` score 0. Those are honest numbers, not good ones.
 
 ## Reporting a problem
 
-[Gauge's SECURITY.md](https://github.com/posture-sec/guage/blob/main/SECURITY.md) states what the code is, what it is not, and how to disclose a finding. Read its status section first: it tells you whether what you found is a bug or a limitation that is already written down.
+Each repository states its own scope and disclosure path: [Gauge's SECURITY.md](https://github.com/posture-sec/guage/blob/main/SECURITY.md) and [Airlock's SECURITY.md](https://github.com/posture-sec/airlock/blob/main/SECURITY.md). Read the status section of whichever one you are reporting against first: it tells you whether what you found is a bug or a limitation that is already written down.
