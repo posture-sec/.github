@@ -25,7 +25,7 @@ Read on 2026-11-02:
 
 - OpenSSF Scorecard for Gauge: **6.8** overall. `Pinned-Dependencies`, `Token-Permissions`, `Dangerous-Workflow`, `Security-Policy`, `Dependency-Update-Tool`, `Vulnerabilities`, `Binary-Artifacts`, `Fuzzing`, `License` and `CI-Tests` score 10; `Branch-Protection` scores 4; `Code-Review`, `Maintained`, `Contributors`, `SAST` and `CII-Best-Practices` score 0. [Full result](https://scorecard.dev/viewer/?uri=github.com/posture-sec/guage).
 - Gauge has been run against testnet only, which is its own verification policy. Five recorded runs, the latest at ledger 5517199 on 2026-11-02: one WARN finding, exit 1.
-- Readiness in Gauge's roadmap: 37 of 69 tasks across Phases 0 to 6, 1 of 10 gates green. v0.1.0 is Phases 0 to 4 and v0.2.0 is Phases 5 and 6. Neither tag exists yet.
+- Readiness in Gauge's roadmap: 38 of 70 tasks across Phases 0 to 6, 1 of 10 gates green. v0.1.0 is Phases 0 to 4 and v0.2.0 is Phases 5 and 6. Neither tag exists yet.
 - One maintainer and no external contributions yet, which is why `Contributors` and `Code-Review` score 0. Those are honest numbers, not good ones.
 
 ## Reporting a problem
