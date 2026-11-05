@@ -161,13 +161,18 @@ and let the review catch it.
 
 ## Length and writing
 
-Aim between 1200 and 2500 characters. Below that, a section is almost always a placeholder; above
-it, the issue is doing a tutorial that belongs in a document.
+Aim between 2500 and 5000 characters. That range is measured, not chosen: the first twenty-one
+bodies written to this contract landed between 3400 and 5900, and the short end of it belongs to
+gate rows and owner acts, where there is no code to place and no command to hand over. Below about
+2000 a section is usually a placeholder rather than an answer. Above 6000 the issue is writing a
+tutorial that belongs in a document, and the fix is to cite the document.
 
 Same conventions as the rest of the organization, because an issue is part of the public record:
-plain language, no em dashes, UTC timestamps with the source named, prose wrapped at 100 columns,
-and output describes posture. Nothing here calls an account secure or safe, and a clean run is
-never written as a claim that an account cannot be misused.
+plain language, no em dashes, UTC timestamps with the source named, prose wrapped near 100 columns
+(a line that runs a few characters over because of a path, a command or a quoted log line is not
+worth rewrapping the paragraph above it), and output describes posture. Nothing here calls an
+account secure or safe, and a clean run is never written as a claim that an account cannot be
+misused.
 
 ## What does not carry the contract
 
